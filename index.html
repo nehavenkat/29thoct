@@ -18,30 +18,89 @@
     <style>
         /*
             EX1) Write a selector to target the main title of the page */
-
-            h1{
-                color : red;
-            }
-        
+                  
+                  var select = document.querySelector('h1');
+                  /*targetting the heading*/
+            
             /* EX2) Write a selector to target every children of the navbar */
-            div nav a { 
-                color: blue;
-            }
-
+                   var select2 = document.querySelectorAll('nav > *');
+                /*  The '>' combinator selects nodes that are direct children of the first element. and 
+                      '*' will match all the elements of the document.*/
 
            /* EX3) Write a selector to target the "continue reading..." inside the jumbotron */
-           div h1 p >a{
-                   color :red;
-           }
+                     
+                   var select3 = document.querySelectorAll('.jumbotron a');
 
-          /* Write a selector to target every children of the navbar EX4) Write a selector to target the first blogpost
-            EX5) Write a selector to target the "even" links in the navbar
-            EX6) Write a selector to target the last blog post
-            EX7) Write a selector to target all the li into the sidebar
-            EX8) Write a selector to target the second post author
-            EX9) Write a selector to target the "back to top" link
-            EX10) Write a selector to target the footer
-        */ 
+                   /* As jumbotron is a class select the 'a' directly*/
+           
+           /*  EX4) Write a selector to target the first blogpost (not the heading all block post)*/
+                 
+                 var select4 = document.querySelectorAll('h3 + .blog-post ');
+
+           /* The + combinator selects adjacent siblings. ( In <h3> adding class "blog-post")
+            /////code/////  <h3 class="pb-4 mb-4 font-italic border-bottom">
+                    From the Firehose
+                </h3>
+
+                <div class="blog-post">
+                    <h2 class="blog-post-title">Sample blog post</h2>
+           This means that the second element directly follows the first, and both share the same parent.*/
+           
+           
+           /* EX5) Write a selector to target the "even" links in the navbar*/
+
+             var select5 = document.querySelectorAll(' nav a:nth-child(2n)');
+
+            /* Selects every fourth element among any group of siblings  ":nth-child(4n)"*/
+
+
+            /* EX6) Write a selector to target the last blog post */
+
+                var select6 = document.querySelectorAll('.blog-post:last-of-type');
+
+    /* The :last-of-type CSS pseudo-class represents the last element of its type among a group of sibling elements.*/
+             /*<div class="blog-post">
+                    <h2 class="blog-post-title">New feature</h2>
+                    <p class="blog-post-meta">December 14, 2013 by <a href="#">Chris</a></p>*/
+
+
+        /* EX7) Write a selector to target all the li into the sidebar*/
+
+              var select7 = document.querySelectorAll('.blog-sidebar li ');
+
+
+            /*EX8) Write a selector to target the second post author */
+            
+              var select8 = document.querySelectorAll('.blog-post:nth-of-type(2) .blog-post-meta a');
+
+            /*  here we are taking the 2th blog post so using "nth of type"
+            and the taking the class of P "blog-post-meta" and then the "a" element as their are many a's
+            
+                    <div class="blog-post">
+                    <h2 class="blog-post-title">Another blog post</h2>
+                    <p class="blog-post-meta">December 23, 2013 by <a href="#">Jacob</a></p>*/
+
+           /* EX9) Write a selector to target the "back to top" link*/
+
+           var select9 = document.querySelectorAll('.blog-footer p:last-child a');
+
+           /*  here we selcting class "blog-footer" and last child of p and a
+            <footer class="blog-footer">
+        <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a
+                href="https://twitter.com/mdo">@mdo</a>.</p>
+        <p>
+            <a href="#">Back to top</a>
+        </p>
+    </footer>*/
+
+
+           /* EX10) Write a selector to target the footer */
+
+          var select10 = document.querySelector('footer');
+
+           /* Just targetting the footer*/
+
+         
     </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">

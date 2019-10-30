@@ -380,8 +380,19 @@
     
     /*
         JS Exercises
-        EX11) Write a function to add a new link into the navbar
-        EX12) Write a function to remove the Search Looking class item
+        EX11) Write a function to add a new link into the navbar*/
+
+              function newLink(){
+                  newNav = document.querySelector('nav');
+                  newNav.append(document.createElement('a'));
+              }
+              /* Here we are creating  a new link '<a>' in a navbar. when we go to element(in browser) 
+              and check we will have an <a></a> tab created  */
+
+       /* EX12) Write a function to remove the Search Looking class item
+
+
+       
         EX13) Write a function to change the background of the jumbotron
         EX14) Write a function to change the color of the main title
         EX15) Write a function to change the column size for post headings
